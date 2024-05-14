@@ -1,0 +1,2073 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Lexend', sans-serif;
+  }
+}
+
+:root {
+  /* font-family: Dosis, sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  /* padding: 0.6em 1.2em; */
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  /* background-color: #1a1a1a; */
+  /* cursor: pointer; */
+  /* transition: border-color 0.25s; */
+}
+
+button:hover {
+  border-color: #84badc;
+  border: 1.7px solid #84badc;
+}
+@layer components {
+  .rotate-animation {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+  .rotate-animation:hover {
+    @apply transform rotate-45;
+  }
+
+}
+
+/* button:focus, */
+/*button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}*/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* for chat and quiz button */
+.ChatQuizButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*
+.chatPageButton,
+.quizPageButton {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+*/
+/* ********************** */
+
+/* temp */
+/*
+.test {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+*/
+/* ********************** */
+
+/* layout for input radio */
+input[type="radio"] {
+  accent-color: black;
+}
+/* ********************** */
+
+/* layout for login page */
+.loginLabelContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.loginLabel {
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  user-select: none;
+}
+
+.loginPageEmailInputSectionContainer,
+.loginPagePasswordInputSectionContainer,
+.loginPageIdentitySelectSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.loginPageEmailInputLabelContainer,
+.loginPagePasswordInputLabelContainer,
+.loginPageIdentitySelectLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.loginPageEmailLabelAndIconContainer,
+.loginPagePasswordLabelAndIconContainer,
+.loginPageIdentityLabelAndIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginPageEmailInputLabel,
+.loginPagePasswordInputLabel,
+.loginPageIdentitySelectLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.loginPageNewUserLabel,
+.loginPageResendLabel {
+  font-size: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.loginPageNewUserLabel:hover,
+.loginPageResendLabel:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loginPageEmailInputContainer,
+.loginPagePasswordInputContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.loginPageEmailInput,
+.loginPagePasswordInput {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.loginPageEmailInputDomain {
+  font-size: 12px;
+  user-select: none;
+}
+
+.loginPageEyeIconContainer,
+.loginPageEyeOffIconContainer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.loginPageLoginButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.loginPageLoginButton {
+  background-color: #d7dde0;
+  color: black;
+  font-weight: bold;
+  user-select: none;
+  border-radius: 5px;
+  padding: 0.6em 1.2em;
+}
+/* ********************** */
+
+/* layout for registration page */
+.registrationLabelContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.registrationLabel {
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  user-select: none;
+}
+
+.registrationPageEmailInputSectionContainer,
+.registrationPagePasswordInputSectionContainer,
+.registrationPageIdentitySelectSectionContainer,
+.registrationPageYearOfStudySelectSectionContainer,
+.registrationPageNameInputSectionContainer,
+.registrationPageProgramInputSectionContainer,
+.registrationPageDateOfBirthInputSectionContainer,
+.registrationPageProfileImageUploadSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.registrationPageEmailInputLabelContainer,
+.registrationPagePasswordInputLabelContainer,
+.registrationPageIdentitySelectLabelContainer,
+.registrationPageYearOfStudySelectLabelContainer,
+.registrationPageNameInputLabelContainer,
+.registrationPageProgramInputLabelContainer,
+.registrationPageDateOfBirthInputLabelContainer,
+.registrationPageProfileImageUploadLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.registrationPageEmailLabelAndIconContainer,
+.registrationPagePasswordLabelAndIconContainer,
+.registrationPageIdentityLabelAndIconContainer,
+.registrationPageYearOfStudyLabelAndIconContainer,
+.registrationPageNameLabelAndIconContainer,
+.registrationPageProgramLabelAndIconContainer,
+.registrationPageDateOfBirthLabelAndIconContainer,
+.registrationPageProfileImageLabelAndIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registrationPageEmailInputLabel,
+.registrationPagePasswordInputLabel,
+.registrationPageIdentitySelectLabel,
+.registrationPageYearOfStudySelectLabel,
+.registrationPageNameInputLabel,
+.registrationPageProgramInputLabel,
+.registrationPageDateOfBirthInputLabel,
+.registrationPageProfileImageUploadLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.registrationPageResendLabel,
+.registrationPageRemoveLabel {
+  font-size: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.registrationPageResendLabel:hover,
+.registrationPageRemoveLabel:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.registrationPageEmailInputContainer,
+.registrationPagePasswordInputContainer,
+.registrationPageDateOfBirthInputContainer,
+.registrationPageProfileImageUploadContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.registrationPageNameInputContainer,
+.registrationPageProgramInputContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.registrationPageFirstNameInputContainer,
+.registrationPageLastNameInputContainer,
+.registrationPageNickNameInputContainer,
+.registrationPageFirstMajorInputContainer,
+.registrationPageSecondMajorInputContainer,
+.registrationPageMinorInputContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.registrationPageFirstNameInputContainer,
+.registrationPageLastNameInputContainer,
+.registrationPageFirstMajorInputContainer,
+.registrationPageSecondMajorInputContainer {
+  margin-bottom: 5px;
+}
+
+.registrationPageEmailInput,
+.registrationPagePasswordInput,
+.registrationPageFirstNameInput,
+.registrationPageLastNameInput,
+.registrationPageNickNameInput,
+.registrationPageFirstMajorInput,
+.registrationPageSecondMajorInput,
+.registrationPageMinorInput,
+.registrationPageDateOfBirthDisplay,
+.registrationPageProfileImageDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.registrationDateOfBirthSelector,
+.registrationProfileImageSelector {
+  display: none;
+}
+
+.registrationPageDateOfBirthCalendarIconContainer,
+.registrationPageProfileImageUploadIconContainer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.registrationPageEmailInputDomain,
+.registrationPageFirstNameLabel,
+.registrationPageLastNameLabel,
+.registrationPageNickNameLabel,
+.registrationPageFirstMajorLabel,
+.registrationPageSecondMajorLabel,
+.registrationPageMinorLabel {
+  font-size: 12px;
+  user-select: none;
+}
+
+.registrationPageEyeIconContainer,
+.registrationPageEyeOffIconContainer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.registrationPageRegistrationButtonCancelButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.registrationPageRegistrationButton,
+.registrationPageCancelButton {
+  background-color: #d7dde0;
+  color: black;
+  font-weight: bold;
+  user-select: none;
+  border-radius: 5px;
+  padding: 0.6em 1.2em;
+}
+
+.registrationPageRegistrationButton {
+  margin-bottom: 5px;
+}
+/* ********************** */
+
+/* layout for identity select drop down menu + year of study drop down menu + privacy select drop down menu  + quiz answer select drop down menu */
+.dropDownMenuIcon {
+  height: 10px;
+  width: 10px;
+  user-select: none;
+}
+
+.loginIdentitySelectDropDownMenuContainer,
+.registrationIdentitySelectDropDownMenuContainer,
+.registrationYearOfStudySelectDropDownMenuContainer,
+.addNewGroupPrivacySelectDropDownMenuContainer,
+.chatRoomInformationPrivacySelectDropDownMenuContainer,
+.createQuizAnswerSelectDropDownMenuContainer,
+.quizQuestionAnswerSelectDropDownMenuContainer {
+  position: relative;
+  user-select: none;
+}
+
+.loginIdentitySelectDropDownMenuContainer
+  .loginIdentitySelectDropDownMenuButton,
+.registrationIdentitySelectDropDownMenuContainer
+  .registrationIdentitySelectDropDownMenuButton,
+.registrationYearOfStudySelectDropDownMenuContainer
+  .registrationYearOfStudySelectDropDownMenuButton,
+.addNewGroupPrivacySelectDropDownMenuContainer
+  .addNewGroupPrivacySelectDropDownMenuButton,
+.chatRoomInformationPrivacySelectDropDownMenuContainer
+  .chatRoomInformationPrivacySelectDropDownMenuButton,
+.createQuizAnswerSelectDropDownMenuContainer
+  .createQuizAnswerSelectDropDownMenuButton,
+.quizQuestionAnswerSelectDropDownMenuContainer
+  .quizQuestionAnswerSelectDropDownMenuButton {
+  padding: 5px 10px 5px 10px;
+  background-color: white;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #666666;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.loginIdentitySelectDropDownMenuContainer
+  .loginIdentitySelectDropDownMenuContent,
+.registrationIdentitySelectDropDownMenuContainer
+  .registrationIdentitySelectDropDownMenuContent,
+.registrationYearOfStudySelectDropDownMenuContainer
+  .registrationYearOfStudySelectDropDownMenuContent,
+.addNewGroupPrivacySelectDropDownMenuContainer
+  .addNewGroupPrivacySelectDropDownMenuContent,
+.chatRoomInformationPrivacySelectDropDownMenuContainer
+  .chatRoomInformationPrivacySelectDropDownMenuContent,
+.createQuizAnswerSelectDropDownMenuContainer
+  .createQuizAnswerSelectDropDownMenuContent,
+.quizQuestionAnswerSelectDropDownMenuContainer
+  .quizQuestionAnswerSelectDropDownMenuContent {
+  position: absolute;
+  left: 0px;
+  top: 110%;
+  background-color: #d7dde0;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.loginIdentitySelectDropDownMenuContainer
+  .loginIdentitySelectDropDownMenuContent
+  .loginIdentitySelectDropDownMenuItem,
+.registrationIdentitySelectDropDownMenuContainer
+  .registrationIdentitySelectDropDownMenuContent
+  .registrationIdentitySelectDropDownMenuItem,
+.registrationYearOfStudySelectDropDownMenuContainer
+  .registrationYearOfStudySelectDropDownMenuContent
+  .registrationYearOfStudySelectDropDownMenuItem,
+.addNewGroupPrivacySelectDropDownMenuContainer
+  .addNewGroupPrivacySelectDropDownMenuContent
+  .addNewGroupPrivacySelectDropDownMenuItem,
+.chatRoomInformationPrivacySelectDropDownMenuContainer
+  .chatRoomInformationPrivacySelectDropDownMenuContent
+  .chatRoomInformationPrivacySelectDropDownMenuItem,
+.createQuizAnswerSelectDropDownMenuContainer
+  .createQuizAnswerSelectDropDownMenuContent
+  .createQuizAnswerSelectDropDownMenuItem,
+.quizQuestionAnswerSelectDropDownMenuContainer
+  .quizQuestionAnswerSelectDropDownMenuContent
+  .quizQuestionAnswerSelectDropDownMenuItem {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.loginIdentitySelectDropDownMenuContainer
+  .loginIdentitySelectDropDownMenuContent
+  .loginIdentitySelectDropDownMenuItem:hover,
+.registrationIdentitySelectDropDownMenuContainer
+  .registrationIdentitySelectDropDownMenuContent
+  .registrationIdentitySelectDropDownMenuItem:hover,
+.registrationYearOfStudySelectDropDownMenuContainer
+  .registrationYearOfStudySelectDropDownMenuContent
+  .registrationYearOfStudySelectDropDownMenuItem:hover,
+.addNewGroupPrivacySelectDropDownMenuContainer
+  .addNewGroupPrivacySelectDropDownMenuContent
+  .addNewGroupPrivacySelectDropDownMenuItem:hover,
+.chatRoomInformationPrivacySelectDropDownMenuContainer
+  .chatRoomInformationPrivacySelectDropDownMenuContent
+  .chatRoomInformationPrivacySelectDropDownMenuItem:hover,
+.createQuizAnswerSelectDropDownMenuContainer
+  .createQuizAnswerSelectDropDownMenuContent
+  .createQuizAnswerSelectDropDownMenuItem:hover,
+.quizQuestionAnswerSelectDropDownMenuContainer
+  .quizQuestionAnswerSelectDropDownMenuContent
+  .quizQuestionAnswerSelectDropDownMenuItem:hover {
+  background-color: #c5c6c7;
+}
+/* ********************** */
+
+/* layout for home page */
+.homePageProfileImageNameIdentityContainer {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.homePageNameIdentityContainer {
+  margin-left: 20px;
+  align-items: center;
+}
+
+.homePageProfileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.homePageName {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.homePageIdentity {
+  font-size: 14px;
+  user-select: none;
+}
+
+.homePageChatQuizSystemAccessGroupAddButtonContainer {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  column-gap: 10px;
+  margin: 8px;
+  align-items: center;
+}
+
+.homePageChatSystemAccessButton,
+.homePageQuizSystemAccessButton {
+  color: black;
+  background-color: #d7dde0;
+  width: 100%;
+  font-weight: bold;
+  user-select: none;
+  padding: 5px;
+}
+
+.homePageGroupAddButton {
+  color: black;
+  background-color: #d7dde0;
+  width: 100%;
+  font-weight: bold;
+  user-select: none;
+  padding: 9px;
+}
+
+.homePageGroupAddIconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.homePageGroupSearchLabel {
+  display: none;
+}
+
+.homePageGroupSearchIconInputContainer {
+  display: flex;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.homePageGroupSearchInput {
+  border-radius: 20px;
+  height: 35px;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+}
+/* ********************** */
+
+/* layout for profile page */
+.profilePageProfileLabelSaveCancelButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.profilePageProfileLabel {
+  font-size: 15px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.profilePageCancelButton,
+.profilePageSaveButton {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.profilePageProfileImage {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  margin: auto;
+  user-select: none;
+}
+
+.profilePageChangeProfileImageButton {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.profilePageChangeProfileImageButton:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profilePageFirstNameDisplaySectionLastNameDisplaySectionContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 25px;
+  column-gap: 10px;
+}
+
+.profilePageFirstNameDisplaySectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.profilePageNicknameUpdateSectionContainer,
+.profilePageUserIDDisplaySectionContainer,
+.profilePageEmailDisplaySectionContainer,
+.profilePageFirstMajorProgramDisplaySectionContainer,
+.profilePageSecondMajorProgramUpdateSectionContainer,
+.profilePageMinorProgramUpdateSectionContainer,
+.profilePageLogoutAccountInputSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.profilePageNicknameUpdateLabelContainer,
+.profilePageFirstNameDisplayLabelContainer,
+.profilePageLastNameDisplayLabelContainer,
+.profilePageUserIDDisplayLabelContainer,
+.profilePageEmailDisplayLabelContainer,
+.profilePageFirstMajorProgramDisplayLabelContainer,
+.profilePageSecondMajorProgramUpdateLabelContainer,
+.profilePageMinorProgramUpdateLabelContainer,
+.profilePageLogoutAccountInputLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.profilePageNicknameLabelContainer,
+.profilePageFirstNameLabelContainer,
+.profilePageLastNameLabelContainer,
+.profilePageUserIDLabelContainer,
+.profilePageEmailLabelContainer,
+.profilePageFirstMajorProgramLabelContainer,
+.profilePageSecondMajorProgramLabelContainer,
+.profilePageMinorProgramLabelContainer,
+.profilePageLogoutAccountLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilePageNicknameUpdateLabel,
+.profilePageFirstNameDisplayLabel,
+.profilePageLastNameDisplayLabel,
+.profilePageUserIDDisplayLabel,
+.profilePageEmailDisplayLabel,
+.profilePageFirstMajorProgramDisplayLabel,
+.profilePageSecondMajorProgramUpdateLabel,
+.profilePageMinorProgramUpdateLabel,
+.profilePageLogoutAccountInputLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.profilePageLogoutAccountInputContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.profilePageLogoutAccountInput {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.profilePageNicknameUpdateContainer,
+.profilePageFirstNameDisplayContainer,
+.profilePageLastNameDisplayContainer,
+.profilePageUserIDDisplayContainer,
+.profilePageEmailDisplayContainer,
+.profilePageFirstMajorProgramDisplayContainer,
+.profilePageSecondMajorProgramUpdateContainer,
+.profilePageMinorProgramUpdateContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.profilePageNicknameUpdate,
+.profilePageFirstNameDisplay,
+.profilePageLastNameDisplay,
+.profilePageUserIDDisplay,
+.profilePageEmailDisplay,
+.profilePageFirstMajorProgramDisplay,
+.profilePageSecondMajorProgramUpdate,
+.profilePageMinorProgramUpdate {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+/* ********************** */
+
+/* layout for addNewGroup page */
+.addNewGroupPageAddChatGroupLabelCancelButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.addNewGroupPageAddChatGroupLabel {
+  font-size: 15px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.addNewGroupPageCancelButton,
+.addNewGroupPageCreateButton,
+.addNewGroupPageJoinButton {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.addNewGroupPageActionSelectButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  margin: 8px;
+  align-items: center;
+}
+
+.addNewGroupPageCreateNewActionButton,
+.addNewGroupPageJoinExistingActionButton {
+  color: black;
+  background-color: #d7dde0;
+  width: 100%;
+  font-weight: bold;
+  user-select: none;
+  padding: 5px;
+}
+
+.addNewGroupPageGroupSearchLabel {
+  display: none;
+}
+
+.addNewGroupPageGroupSearchIconInputContainer {
+  display: flex;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.addNewGroupPageGroupSearchInput {
+  border-radius: 20px;
+  height: 35px;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+}
+
+.addNewGroupPageNewGroupNameInputSectionContainer,
+.addNewGroupPageGroupProfileImageUploadSectionContainer,
+.addNewGroupPagePrivacySelectSectionContainer,
+.addNewGroupPageGroupMemberInviteSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.addNewGroupPageNewGroupNameInputLabelContainer,
+.addNewGroupPageGroupProfileImageUploadLabelContainer,
+.addNewGroupPagePrivacySelectLabelContainer,
+.addNewGroupPageGroupMemberInviteLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.addNewGroupPageNewGroupNameLabelContainer,
+.addNewGroupPageGroupProfileImageLabelContainer,
+.addNewGroupPagePrivacyLabelContainer,
+.addNewGroupPageGroupMemberInvitationLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addNewGroupPageNewGroupNameInputLabel,
+.addNewGroupPageGroupProfileImageUploadLabel,
+.addNewGroupPagePrivacySelectLabel,
+.addNewGroupPageGroupMemberInviteLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.addNewGroupPageNewGroupNameInputContainer,
+.addNewGroupPageGroupProfileImageUploadContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.addNewGroupPageGroupProfileImageUploadContainer {
+  padding-right: 10px;
+}
+
+.addNewGroupPageNewGroupNameInput,
+.addNewGroupPageGroupProfileImageDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.addNewGroupPageGroupProfileImageUploadIconContainer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.addNewGroupGroupProfileImageSelector {
+  display: none;
+}
+
+.addNewGroupPageRemoveLabel,
+.addNewGroupPageAddInvitationLabel {
+  font-size: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.addNewGroupPageRemoveLabel:hover,
+.addNewGroupPageAddInvitationLabel:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ********************** */
+
+/* layout for chatRoomInformation page */
+.chatRoomInformationPageChatRoomInformationLabelSaveCancelButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.chatRoomInformationPageChatRoomInformationLabel {
+  font-size: 15px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.chatRoomInformationPageCancelButton,
+.chatRoomInformationPageSaveButton {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.chatRoomInformationPageChatRoomProfileImage {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  margin: auto;
+  user-select: none;
+}
+
+.chatRoomInformationPageChangeChatRoomProfileImageButton {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.chatRoomInformationPageChangeChatRoomProfileImageButton:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chatRoomInformationPagePrivacySelectSectionContainer,
+.chatRoomInformationPageChatRoomNameEditSectionContainer,
+.chatRoomInformationPageChatRoomIDDisplaySectionContainer,
+.chatRoomInformationPageMemberListDisplaySectionContainer,
+.chatRoomInformationPageGroupExitInputSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.chatRoomInformationPagePrivacySelectLabelContainer,
+.chatRoomInformationPageChatRoomNameEditLabelContainer,
+.chatRoomInformationPageChatRoomIDDisplayLabelContainer,
+.chatRoomInformationPageMemberListDisplayLabelContainer,
+.chatRoomInformationPageGroupExitInputLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.chatRoomInformationPageChatRoomNameEditContainer,
+.chatRoomInformationPageChatRoomIDDisplayContainer,
+.chatRoomInformationPageChatRoomNameDisplayContainer,
+.chatRoomInformationPageChatRoomPrivacyDisplayContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.chatRoomInformationPageChatRoomNameEdit,
+.chatRoomInformationPageChatRoomNameDisplay,
+.chatRoomInformationPageChatRoomIDDisplay,
+.chatRoomInformationPageChatRoomPrivacyDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.chatRoomInformationPagePrivacyLabelContainer,
+.chatRoomInformationPageChatRoomNameLabelContainer,
+.chatRoomInformationPageChatRoomIDLabelContainer,
+.chatRoomInformationPageMemberListLabelContainer,
+.chatRoomInformationPageGroupExitLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatRoomInformationPagePrivacySelectLabel,
+.chatRoomInformationPageChatRoomNameEditLabel,
+.chatRoomInformationPageChatRoomIDDisplayLabel,
+.chatRoomInformationPageMemberListDisplayLabel,
+.chatRoomInformationPageGroupExitInputLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.chatRoomInformationPageGroupExitInputContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.chatRoomInformationPageGroupExitInput {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.chatRoomInformationPageMemberListUserInfoContainer,
+.chatRoomInformationPageMemberListMemberInfoContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.chatRoomInformationPageMemberListUserInformationDisplayContainer,
+.chatRoomInformationPageMemberListMemberInformationDisplayContainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.chatRoomInformationPageMemberListMemberInformationDisplayContainer {
+  cursor: pointer;
+}
+
+.chatRoomInformationPageMemberListUserProfileImage,
+.chatRoomInformationPageMemberListMemberProfileImage {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.chatRoomInformationPageMemberListUserFullName,
+.chatRoomInformationPageMemberListMemberFullName {
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+  font-weight: bold;
+}
+
+.chatRoomInformationPageMemberListUserJoinDate,
+.chatRoomInformationPageMemberListMemberJoinDate {
+  font-size: 12px;
+}
+
+.chatRoomInformationPageMemberListUserIsChatRoomAdmin,
+.chatRoomInformationPageMemberListMemberIsChatRoomAdmin {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chatRoomInformationPageMemberListMemberSettingPanelContainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.chatRoomInformationPageMemberListViewMemberProfileButton,
+.chatRoomInformationPageMemberListRemoveMemberFromGroupButton,
+.chatRoomInformationPageMemberListRemoveMemberAdminButton {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 2px;
+}
+
+.chatRoomInformationPageChatRoomMemberInviteSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.chatRoomInformationPageChatRoomMemberInviteLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.chatRoomInformationPageChatRoomMemberInvitationLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatRoomInformationPageChatRoomMemberInviteLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.chatRoomInformationPageAddInvitationLabel,
+.chatRoomInformationPageShowHideMemberListLabel {
+  font-size: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.chatRoomInformationPageAddInvitationLabel:hover,
+.chatRoomInformationPageShowHideMemberListLabel:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ********************** */
+
+/* layout for member invite component */
+.addNewGroupAndChatRoomInformationPageGroupMemberInvitationDefaultUserIDInputContainer,
+.addNewGroupAndChatRoomInformationPageGroupMemberInvitationExtraUserIDInputContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.addNewGroupAndChatRoomInformationPageGroupMemberInvitationExtraUserIDInputContainer {
+  padding-right: 10px;
+}
+
+.addNewGroupAndChatRoomInformationPageGroupMemberInvitationUserIDInput {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.addNewGroupAndChatRoomInformationPageGroupMemberInvitationDeleteIconContainer {
+  cursor: pointer;
+  user-select: none;
+}
+/* ********************** */
+
+/* layout for groupMemberProfile page */
+.groupMemberProfilePageGroupMemberProfileLabelCancelButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.groupMemberProfilePageCancelButton {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.groupMemberProfilePageGroupMemberProfileLabel {
+  font-size: 15px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.groupMemberProfilePageGroupMemberProfileImage {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  margin: auto;
+  user-select: none;
+}
+
+.groupMemberProfilePageFirstLastNameDisplaySectionContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 25px;
+  column-gap: 10px;
+}
+
+.groupMemberProfilePageUserIDDisplaySectionContainer,
+.groupMemberProfilePageEmailDisplaySectionContainer,
+.groupMemberProfilePageYearOfStudyDisplaySectionContainer,
+.groupMemberProfilePageFirstMajorProgramDisplaySectionContainer,
+.groupMemberProfilePageSecondMajorProgramDisplaySectionContainer,
+.groupMemberProfilePageMinorProgramDisplaySectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.groupMemberProfilePageFirstNameDisplayLabelContainer,
+.groupMemberProfilePageLastNameDisplayLabelContainer,
+.groupMemberProfilePageUserIDDisplayLabelContainer,
+.groupMemberProfilePageEmailDisplayLabelContainer,
+.groupMemberProfilePageYearOfStudyDisplayLabelContainer,
+.groupMemberProfilePageFirstMajorProgramDisplayLabelContainer,
+.groupMemberProfilePageSecondMajorProgramDisplayLabelContainer,
+.groupMemberProfilePageMinorProgramDisplayLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.groupMemberProfilePageFirstNameLabelContainer,
+.groupMemberProfilePageLastNameLabelContainer,
+.groupMemberProfilePageUserIDLabelContainer,
+.groupMemberProfilePageEmailLabelContainer,
+.groupMemberProfilePageYearOfStudyLabelContainer,
+.groupMemberProfilePageFirstMajorProgramLabelContainer,
+.groupMemberProfilePageSecondMajorProgramLabelContainer,
+.groupMemberProfilePageMinorProgramLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.groupMemberProfilePageFirstNameDisplayLabel,
+.groupMemberProfilePageLastNameDisplayLabel,
+.groupMemberProfilePageUserIDDisplayLabel,
+.groupMemberProfilePageEmailDisplayLabel,
+.groupMemberProfilePageYearOfStudyDisplayLabel,
+.groupMemberProfilePageFirstMajorProgramDisplayLabel,
+.groupMemberProfilePageSecondMajorProgramDisplayLabel,
+.groupMemberProfilePageMinorProgramDisplayLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.groupMemberProfilePageFirstNameDisplayContainer,
+.groupMemberProfilePageLastNameDisplayContainer,
+.groupMemberProfilePageUserIDDisplayContainer,
+.groupMemberProfilePageEmailDisplayContainer,
+.groupMemberProfilePageYearOfStudyDisplayContainer,
+.groupMemberProfilePageFirstMajorProgramDisplayContainer,
+.groupMemberProfilePageSecondMajorProgramDisplayContainer,
+.groupMemberProfilePageMinorProgramDisplayContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.groupMemberProfilePageFirstNameDisplay,
+.groupMemberProfilePageLastNameDisplay,
+.groupMemberProfilePageUserIDDisplay,
+.groupMemberProfilePageEmailDisplay,
+.groupMemberProfilePageYearOfStudyDisplay,
+.groupMemberProfilePageFirstMajorProgramDisplay,
+.groupMemberProfilePageSecondMajorProgramDisplay,
+.groupMemberProfilePageMinorProgramDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+/* ********************** */
+
+/* layout for joined chat and quiz group component */
+.homePageJoinedChatGroupContainer,
+.homePageJoinedQuizGroupContainer {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.homePageJoinedChatGroupProfileImage,
+.homePageJoinedQuizGroupProfileImage {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+
+.homePageJoinedChatGroupChatGroupNameLatestMessageDateUnseenMessageNumberContainer,
+.homePageJoinedQuizGroupQuizGroupNameLatestQuestionDateUnseenQuestionNumberContainer {
+  border-bottom-width: 1px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.homePageJoinedChatGroupChatGroupName,
+.homePageJoinedQuizGroupQuizGroupName {
+  font-size: 15px;
+  font-weight: bold;
+  max-width: 100%;
+}
+
+.homePageJoinedChatGroupLatestMessageDate,
+.homePageJoinedQuizGroupLatestQuestionDate {
+  font-size: 12px;
+  max-width: 100%;
+}
+
+.homePageJoinedChatGroupUnseenMessageNumber {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #d7dde0;
+  border-radius: 5px;
+}
+/* ********************** */
+
+/* layout for create quiz page */
+.createQuizPageQuizCreateLabelCreateCancelButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.createQuizPageCancelButton,
+.createQuizPageSaveButton {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.createQuizPageQuizCreateLabel {
+  font-size: 15px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.createQuizPageQuestionInputSectionContainer,
+.createQuizPageFigureUploadSectionContainer,
+.createQuizPageOptionDefineSectionContainer,
+.createQuizPageTopicInputSectionContainer,
+.createQuizPageExpiryDateTimeSelectSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.createQuizPageQuestionInputLabelContainer,
+.createQuizPageFigureUploadLabelContainer,
+.createQuizPageOptionDefineLabelContainer,
+.createQuizPageTopicInputLabelContainer,
+.createQuizPageExpiryDateTimeSelectLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.createQuizPageQuestionLabelContainer,
+.createQuizPageFigureLabelContainer,
+.createQuizPageOptionLabelContainer,
+.createQuizPageTopicLabelContainer,
+.createQuizPageExpiryDateTimeLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createQuizPageQuestionInputLabel,
+.createQuizPageFigureUploadLabel,
+.createQuizPageOptionDefineLabel,
+.createQuizPageTopicInputLabel,
+.createQuizPageExpiryDateTimeSelectLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.createQuizPageExpiryDateTimeSelectContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.createQuizPageExpiryDateTimeDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.createQuizPageExpiryDateTimeCalendarIconContainer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.createQuizExpiryDateTimeSelector {
+  display: none;
+}
+
+.createQuizPageAddFigureLabel,
+.createQuizPageAddOptionLabel,
+.createQuizPageAddTopicLabel {
+  font-size: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.createQuizPageAddFigureLabel:hover,
+.createQuizPageAddOptionLabel:hover,
+.createQuizPageAddTopicLabel:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.createQuizPageChooseImage {
+  display: none;
+}
+
+.createQuizPageQuestionInputContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.createQuizPageQuestionInput {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+  resize: none;
+}
+
+.createQuizPageQuestionInput::-webkit-scrollbar {
+  width: 0px;
+}
+/* ********************** */
+
+/* layout for quiz uploaded figure list + quiz option list + quiz topic list component */
+.createQuizQuizQuestionPageUploadedFigureDisplayContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .createQuizQuizQuestionPageUploadedFigureDisplayContainer, */
+.createQuizQuizQuestionPageDefaultQuizOptionDescriptionInputContainer,
+.createQuizQuizQuestionPageDefaultQuizTopicDescriptionInputContainer,
+.createQuizQuizQuestionPageExtraQuizOptionDescriptionInputContainer,
+.createQuizQuizQuestionPageExtraQuizTopicDescriptionInputContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* .createQuizQuizQuestionPageUploadedFigureDisplayContainer, */
+.createQuizQuizQuestionPageExtraQuizOptionDescriptionInputContainer,
+.createQuizQuizQuestionPageExtraQuizTopicDescriptionInputContainer {
+  padding-right: 10px;
+}
+
+/* .createQuizQuizQuestionPageUploadedFigureDisplay, */
+.createQuizQuizQuestionPageQuizOptionDescriptionInput,
+.createQuizQuizQuestionPageQuizTopicDescriptionInput {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+/* .createQuizQuizQuestionPageUploadedFigureDeleteIconContainer, */
+.createQuizQuizQuestionPageQuizOptionDescriptionDeleteIconContainer,
+.createQuizQuizQuestionPageQuizTopicDescriptionDeleteIconContainer {
+  cursor: pointer;
+  user-select: none;
+}
+/* ********************** */
+
+/* layout for quizQuestion page */
+.quizQuestionPageQuizNumberLabelUpdateSubmitCancelButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.quizQuestionPageCancelButton,
+.quizQuestionPageUpdateButton,
+.quizQuestionPageSubmitButton {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.quizQuestionPageQuizNumberLabel {
+  font-size: 15px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.quizQuestionPageQuestionDisplayUpdateSectionContainer,
+.quizQuestionPageFigureUploadSectionContainer,
+.quizQuestionPageOptionDefineSectionContainer,
+.quizQuestionPageTopicInputSectionContainer,
+.quizQuestionPageResponseInputSectionContainer,
+.quizQuestionPageQuestionInformationDirectSectionContainer,
+.quizQuestionPageExpiryDateTimeSelectSectionContainer,
+.quizQuestionPageRemainingTimeDisplaySectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.quizQuestionPageQuestionDisplayUpdateLabelContainer,
+.quizQuestionPageFigureUploadLabelContainer,
+.quizQuestionPageOptionDefineLabelContainer,
+.quizQuestionPageTopicInputLabelContainer,
+.quizQuestionPageResponseInputLabelContainer,
+.quizQuestionPageQuestionInformationDirectLabelContainer,
+.quizQuestionPageExpiryDateTimeSelectLabelContainer,
+.quizQuestionPageRemainingTimeDisplayLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.quizQuestionPageQuestionLabelContainer,
+.quizQuestionPageFigureLabelContainer,
+.quizQuestionPageOptionLabelContainer,
+.quizQuestionPageTopicLabelContainer,
+.quizQuestionPageResponseLabelContainer,
+.quizQuestionPageQuestionInformationLabelContainer,
+.quizQuestionPageExpiryDateTimeLabelContainer,
+.quizQuestionPageRemainingTimeLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quizQuestionPageQuestionDisplayUpdateLabel,
+.quizQuestionPageFigureUploadLabel,
+.quizQuestionPageOptionDefineLabel,
+.quizQuestionPageTopicInputLabel,
+.quizQuestionPageResponseInputLabel,
+.quizQuestionPageQuestionInformationDirectLabel,
+.quizQuestionPageExpiryDateTimeSelectLabel,
+.quizQuestionPageRemainingTimeDisplayLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.quizQuestionPageRemainingTimeDisplayContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.quizQuestionPageRemainingTimeDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.quizQuestionPageExpiryDateTimeSelectContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.quizQuestionPageExpiryDateTimeDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.quizQuestionPageExpiryDateTimeCalendarIconContainer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.quizQuestionExpiryDateTimeSelector {
+  display: none;
+}
+
+.quizQuestionPageQuestionInformationDirectContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.quizQuestionPageQuestionInformationDirect {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.quizQuestionPageQuestionDisplayUpdateContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  align-items: center;
+}
+
+.quizQuestionPageQuestionUpdate,
+.quizQuestionPageQuestionDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.quizQuestionPageQuizSubmittedLabelContainer {
+  margin-top: 10px;
+}
+
+.quizQuestionPageQuizSubmittedLabel {
+  width: 100%;
+  font-size: 12px;
+}
+
+.quizQuestionPageQuestionUpdate {
+  resize: none;
+}
+
+.quizQuestionPageQuestionUpdate::-webkit-scrollbar {
+  width: 0px;
+}
+
+/*
+.quizQuestionPageQuizQuestionFigure {
+  margin-bottom: 25px;
+}
+*/
+
+.quizQuestionPageQuizQuestionFigureContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quizQuestionPageAddDeleteFigureLabel,
+.quizQuestionPageAddOptionLabel,
+.quizQuestionPageAddTopicLabel {
+  font-size: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.quizQuestionPageAddDeleteFigureLabel:hover,
+.quizQuestionPageAddOptionLabel:hover,
+.quizQuestionPageAddTopicLabel:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quizQuestionPageChooseImage {
+  display: none;
+}
+/* ********************** */
+
+/* layout for AvailableAnswerList component */
+.quizQuestionPageAvailableAnswerDescriptionDisplayContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+.quizQuestionPageAvailableAnswerDescriptionDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+/* ********************** */
+
+/* layout for quizInformation page */
+.quizInformationPageQuizInformationLabelCancelButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.quizInformationPageCancelButton {
+  user-select: none;
+  background-color: #d7dde0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0.6em 1.2em;
+}
+
+.quizInformationPageQuizInformationLabel {
+  font-size: 15px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.quizInformationPageNumberOfStudentDisplaySectionNumberOfSubmissionDisplaySectionContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 25px;
+  column-gap: 10px;
+}
+
+.quizInformationPageCorrectnessProportionChartSelectContainer,
+.quizInformationPageChoicesProportionChartSelectContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.quizInformationPageNumberOfStudentDisplaySectionContainer,
+.quizInformationPageNumberOfSubmissionDisplaySectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.quizInformationPageQuizGroupNameDisplaySectionContainer,
+.quizInformationPageQuizGroupIDDisplaySectionContainer,
+.quizInformationPageQuizIDDisplaySectionContainer,
+.quizInformationPageListOfSubmittedDisplaySectionContainer,
+.quizInformationPageListOfUnsubmittedDisplaySectionContainer,
+.quizInformationPageCorrectnessProportionDisplaySectionContainer,
+.quizInformationPageChoicesProportionDisplaySectionContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 25px;
+}
+
+.quizInformationPageQuizGroupNameDisplayLabelContainer,
+.quizInformationPageQuizGroupIDDisplayLabelContainer,
+.quizInformationPageQuizIDDisplayLabelContainer,
+.quizInformationPageNumberOfStudentDisplayLabelContainer,
+.quizInformationPageNumberOfSubmissionDisplayLabelContainer,
+.quizInformationPageListOfSubmittedDisplayLabelContainer,
+.quizInformationPageListOfUnsubmittedDisplayLabelContainer,
+.quizInformationPageCorrectnessProportionDisplayLabelContainer,
+.quizInformationPageChoicesProportionDisplayLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.quizInformationPageQuizGroupNameLabelContainer,
+.quizInformationPageQuizGroupIDLabelContainer,
+.quizInformationPageQuizIDLabelContainer,
+.quizInformationPageNumberOfStudentLabelContainer,
+.quizInformationPageNumberOfSubmissionLabelContainer,
+.quizInformationPageListOfSubmittedLabelContainer,
+.quizInformationPageListOfUnsubmittedLabelContainer,
+.quizInformationPageCorrectnessProportionLabelContainer,
+.quizInformationPageChoicesProportionLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quizInformationPageQuizGroupNameDisplayLabel,
+.quizInformationPageQuizGroupIDDisplayLabel,
+.quizInformationPageQuizIDDisplayLabel,
+.quizInformationPageNumberOfStudentDisplayLabel,
+.quizInformationPageNumberOfSubmissionDisplayLabel,
+.quizInformationPageListOfSubmittedDisplayLabel,
+.quizInformationPageListOfUnsubmittedDisplayLabel,
+.quizInformationPageCorrectnessProportionDisplayLabel,
+.quizInformationPageChoicesProportionDisplayLabel {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.quizInformationPageQuizGroupNameDisplayContainer,
+.quizInformationPageQuizGroupIDDisplayContainer,
+.quizInformationPageQuizIDDisplayContainer,
+.quizInformationPageNumberOfStudentDisplayContainer,
+.quizInformationPageNumberOfSubmissionDisplayContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.quizInformationPageBarChartSelectButtonContainer,
+.quizInformationPageDoughnutChartSelectButtonContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  align-items: center;
+  display: flex;
+  padding-left: 10px;
+  user-select: none;
+}
+
+.quizInformationPageBarChartLabel,
+.quizInformationPageDoughnutChartLabel {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.quizInformationPageQuizGroupNameDisplay,
+.quizInformationPageQuizGroupIDDisplay,
+.quizInformationPageQuizIDDisplay,
+.quizInformationPageNumberOfStudentDisplay,
+.quizInformationPageNumberOfSubmissionDisplay {
+  border-radius: 5px;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  min-height: 38px;
+}
+
+.quizInformationPageShowHideListOfSubmittedLabel,
+.quizInformationPageShowHideListOfUnsubmittedLabel {
+  font-size: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.quizInformationPageShowHideListOfSubmittedLabel:hover,
+.quizInformationPageShowHideListOfUnsubmittedLabel:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ********************** */
+
+/* layout for QuizSubmittedUnsubmittedList Component */
+.quizInformationPageSubmittedUnsubmittedListStudentInfoContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.quizInformationPageSubmittedUnsubmittedListStudentInformationDisplayContainer {
+  display: grid;
+  grid-template-columns: 40px 1fr 30px;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.quizInformationPageSubmittedUnsubmittedListStudentProfileImage {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.quizInformationPageSubmittedUnsubmittedListStudentFullName {
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+  font-weight: bold;
+}
+
+.quizInformationPageSubmittedUnsubmittedListStudentID,
+.quizInformationPageSubmittedUnsubmittedListStudentResponseDate {
+  font-size: 12px;
+}
+
+.quizInformationPageSubmittedUnsubmittedListStudentResponseCorrectness {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ********************** */
+
+/* layout for UnjoinedChatGroup Component */
+.addNewGroupPageUnjoinedChatGroupContainer {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 20px 40px 3fr;
+  column-gap: 10px;
+  cursor: pointer;
+}
+
+.addNewGroupPageUnjoinedChatGroupProfileImage {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.addNewGroupPageUnjoinedChatGroupChatGroupName {
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+}
+
+.addNewGroupPageUnjoinedChatGroupChatGroupID {
+  font-size: 12px;
+  user-select: none;
+  cursor: pointer;
+}
+/* ********************** */
+
+/* layout for BarChart + Doughnut Chart Component */
+.BarChartContainer,
+.DoughnutChartContainer {
+  width: 296px;
+}
+/* ********************** */
+
+/* layout for splashScreen page */
+.splashScreenPageAppIconContainer {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ********************** */
