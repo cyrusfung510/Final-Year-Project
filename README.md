@@ -11,7 +11,7 @@ To install this project, you need to follow these steps:
 
 1. Clone this repository to your local machine using the command
    ```sh
-   git clone https://github.com/Andy-26/FYP-IMSAC.git
+   git clone https://github.com/cyrusfung510/Final-Year-Project.git
    ``` 
   
 3. Navigate to the `app` directory using the command `cd app`. This is where the front-end code of the project is located.
